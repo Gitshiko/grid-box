@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    /* height: 100vh; */
+    width: 100vw;
+    margin:0;
+    padding:2rem;
+    overflow-x:hidden;
+    font-family: Inconsolata, monospace;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    /* color: black; */
+    max-width: 1500px;
+    /* height: 100vh; */
+    margin: 0 auto;
+    border: 1px solid;
+}
+
+/* heading */
+.container .heading p {
+   color: gray;
+}
+
+
+
+/* flexbox for menu bar starts here */
+.container .menu {
+    background-color: gray;
+    height: 30%; /*there is no effect from this at the moment*/
+    
+}
+
+.container .menu ul{
+    display: flex;
+    justify-items: flex-start;
+    gap: 20px;
+    /* align-items: center; */
+}
+
+.container .menu ul li {
+    list-style-type: none;
+    
+}
+
+.container .menu ul li a {
+    text-decoration: none;
+    color: white; 
+    border: 1px solid; 
+    border-radius: 5px;
+    padding: 2%;
+}
+
+
+/* first gridbox starts here */
+.grid-box1 {
+    display:grid;
+    /* grid-template-columns:400px 400px 400px ; */
+    grid-template-columns: repeat(3,3fr);
+    grid-template-rows: repeat(8,250px);
+}
+
+/* first, the gridbox styling part */
+
+@font-face {
+    font-family: "custom";
+    src:url(/css/Leitura-Display-Swashes.otf) format("opentype");
+}
+.grid-box1 p {
+    font-family:"custom";
+    font-size: 100px;
+}
+
+.grid-box1 .whitefont p {
+    color: white;
+}
+
+.grid-box1 .bluefont p {
+    color: lightblue;
+}
+
+.grid-box1 .greenfont p {
+    color: aquamarine;
+}
+
+.grid-box1 .pinkfont p {
+    color: lightpink;
+}
+
+.grid-box1 .grid1-1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: white;
+}
+
+.grid-box1 .grid1-1 p{
+    transform: rotate(-90deg);
+    font-size: 200px;
+}
+
+.grid-box1 .grid1-10 p{
+    transform: rotate(-90deg);
+    font-size: 200px;
+}
+
+/* here, the making of the grid box and box colouring */
+
+.grid-box1 .grid1-2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: lightpink;
+}
+
+.grid-box1 .grid1-3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: lightblue;
+}
+
+.grid-box1 .grid1-4{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: purple;
+}
+
+.grid-box1 .grid1-5{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    background-color: aquamarine;
+}
+
+.grid-box1 .grid1-6{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: aquamarine;
+}
+
+.grid-box1 .grid1-7{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    background-color:lightpink;
+}
+
+.grid-box1 .grid1-8{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    background-color:white;
+}
+
+.grid-box1 .grid1-9{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    background-color:purple;
+}
+
+.grid-box1 .grid1-10{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    background-color:lightblue;
+}
+
+.alignment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
